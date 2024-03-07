@@ -1,0 +1,16 @@
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>расходы</title>
+
+</head>
+<body>
+    <h1>расходы</h1>
+    <ul>
+        {% for expense in expenses %}
+       <a href ="{% url 'expenses_detail' expense.id %}"><li>{{ expense.category}} : {{ expense.amount }}</li>
+        {% endfor %}
+    </ul>
+    
